@@ -12,3 +12,4 @@
 ## Steps To Solution 
 
 1. Create 2 accounts to use **CREATOR** and **FRIEND**
+2. Create a Mint 

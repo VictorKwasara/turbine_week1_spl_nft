@@ -1,0 +1,31 @@
+{
+  "name": "week1assignment",
+  "version": "1.0.0",
+  "description": "Create Tokens and Nft's ",
+  "homepage": "https://github.com/VictorKwasara/turbine_week1_spl_nft#readme",
+  "bugs": {
+    "url": "https://github.com/VictorKwasara/turbine_week1_spl_nft/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/VictorKwasara/turbine_week1_spl_nft.git"
+  },
+  "license": "MIT",
+  "author": "Victor Kwasara",
+  "type": "module",
+  "main": "index.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "keys:create": "ts-node src/createKey.ts"
+  },
+  "devDependencies": {
+    "@types/node": "^26.6.6",
+    "ts-node": "^10.9.2",
+    "typescript": "^6.0.3"
+  },
+  "dependencies": {
+    "@solana/kit": "^8.6.0",
+    "@solana/kit-plugin-rpc": "^0.23.0",
+    "@solana/kit-plugin-signer": "^0.23.0"
+  }
+}
