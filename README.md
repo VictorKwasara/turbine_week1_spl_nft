@@ -3,16 +3,12 @@
 
 ## Tasks
 
-    <ol>
-        <li>Mint and transfer your own SPL token.</li>
-        <li>Mint an NFT using MPL Core.</li>
-        <li>Update the NFT's name and metadata as the update authority</li>
-        <li>Transfer the NFT ownership between wallets</li>
-        <li>Permanently destroy the NFT and reclaim the rent fees</li>
-    </ol>
+1. Mint and transfer your own SPL token.
+2. Mint an NFT using MPL Core.
+3. Update the NFT's name and metadata as the update authority
+4. Transfer the NFT ownership between wallets
+5. Permanently destroy the NFT and reclaim the rent fees
 
 ## Steps To Solution 
 
-    <ol>
-        <li>Create 2 accounts to use <strong>CREATOR</strong> and <strong>FRIEND</strong></li> 
-    </ol>
+1. Create 2 accounts to use **CREATOR** and **FRIEND**
