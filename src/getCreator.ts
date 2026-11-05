@@ -1,4 +1,4 @@
 import getKey from "./getKey.ts";
 
 
-console.log(await getKey("creator.json"))
+(async () => console.log(await getKey("creator.json")))()

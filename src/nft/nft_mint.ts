@@ -6,7 +6,6 @@ import {
 } from "@metaplex-foundation/umi";
 import { create, mplCore } from "@metaplex-foundation/mpl-core";
 import { base58 } from "@metaplex-foundation/umi/serializers";
-import getKey from "../getKey.ts"
 
 import wallet from "../../keys/creator.json";
 

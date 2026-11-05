@@ -16,7 +16,15 @@
   "main": "index.ts",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "keys:create": "ts-node src/createKey.ts"
+    "keys:create": "ts-node src/createKey.ts",
+    "keys:getcreator": "ts-node src/getCreator.ts",
+    "spl:init": "ts-node src/spl/spl_init.ts",
+    "spl:metadata": "ts-node src/spl/spl_metadat.ts",
+    "spl:mint": "ts-node src/spl/spl_mint.ts",
+    "spl:transfer": "ts-node src/spl/spl_transfer.ts",
+    "nft:image": "ts-node src/nft/nft_image.ts",
+    "nft:mint": "ts-node src/nft/nft_mint.ts",
+    "nft:metadata": "ts-node src/nft/nft_metadata.ts"
   },
   "devDependencies": {
     "@types/node": "^26.6.6",

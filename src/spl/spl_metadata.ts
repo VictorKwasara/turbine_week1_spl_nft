@@ -3,7 +3,7 @@ import {
   publicKey,
   signerIdentity,
 } from "@metaplex-foundation/umi";
-import wallet from "../keys/creator.json"
+import wallet from "../../keys/creator.json"
 import { createUmi } from "@metaplex-foundation/umi-bundle-defaults";
 import {
   createMetadataAccountV3,
@@ -12,7 +12,7 @@ import {
   DataV2Args,
 } from "@metaplex-foundation/mpl-token-metadata";
 import bs58 from "bs58";
-import getKey from "./getKey.ts";
+import getKey from "./../getKey.ts";
 
 
 (async () => {
