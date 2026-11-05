@@ -1,4 +1,7 @@
 import {
+  publicKey,
+} from "@metaplex-foundation/umi";
+import {
   appendTransactionMessageInstructions,
   assertIsTransactionWithBlockhashLifetime,
   createSolanaRpc,
@@ -26,12 +29,12 @@ const rpcSubscriptions = createSolanaRpcSubscriptions(
 
 const token_decimals = 1_000_000n;
 
-//paste your mint address got from spl_init.ts
-const mintKey = await getKey("mint.json")
-
-const mint = mintKey.address;
-
 (async () => {
+  //paste your mint address got from spl_init.ts
+  const mintKey = await getKey("mint.json")
+
+  const mint = publicKey(mintKey.address);
+
   try {
     const signer = await getKey("creator.json")
     const [ata] = await findAssociatedTokenPda({

@@ -3,6 +3,7 @@ import {
   publicKey,
   signerIdentity,
 } from "@metaplex-foundation/umi";
+import wallet from "../keys/creator.json"
 import { createUmi } from "@metaplex-foundation/umi-bundle-defaults";
 import {
   createMetadataAccountV3,
@@ -13,20 +14,18 @@ import {
 import bs58 from "bs58";
 import getKey from "./getKey.ts";
 
-//paste your mint address got from spl_init.ts
-const mintKey = await getKey("mint.json")
-
-const mint = publicKey(mintKey.address);
-
-const umi = createUmi("https://api.devnet.solana.com");
-
-// const keypair = umi.eddsa.createKeypairFromSecretKey(new Uint8Array(wallet));
-const keypair = await getKey("creator.json")
-const signer = createSignerFromKeypair(umi, keypair.keyPair);
-
-umi.use(signerIdentity(signer));
 
 (async () => {
+  const mintKey = await getKey("mint.json")
+  const mint = publicKey(mintKey.address)
+
+  const umi = createUmi("https://api.devnet.solana.com");
+
+  const keypair = umi.eddsa.createKeypairFromSecretKey(new Uint8Array(wallet));
+  const signer = createSignerFromKeypair(umi, keypair);
+
+  umi.use(signerIdentity(signer));
+
   try {
     const accounts: CreateMetadataAccountV3InstructionAccounts = {
       mint,
@@ -35,8 +34,8 @@ umi.use(signerIdentity(signer));
 
     //change the metadata
     const data: DataV2Args = {
-      name: "VictorTKwasara",
-      symbol: "VTK",
+      name: "VictorKwasara",
+      symbol: "VK",
       uri: "",
       sellerFeeBasisPoints: 1,
       creators: null,

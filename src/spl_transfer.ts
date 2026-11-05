@@ -24,16 +24,16 @@ const rpcSubscriptions = createSolanaRpcSubscriptions(
   "wss://api.devnet.solana.com",
 );
 
-//paste your mint address got from spl_init.ts
-const mintKeypair = await getKey("mint.json")
-const mint = mintKeypair.address
-
-//paste the address of the recipient
-
-const friend = await getKey("friend.json")
-const to = friend.address;
-
 (async () => {
+  //paste your mint address got from spl_init.ts
+  const mintKeypair = await getKey("mint.json")
+  const mint = mintKeypair.address
+
+  //paste the address of the recipient
+
+  const friend = await getKey("friend.json")
+  const to = friend.address;
+
   try {
     const signer = await getKey("creator.json")
     const sendAndConfirm = sendAndConfirmTransactionFactory({
@@ -67,7 +67,7 @@ const to = friend.address;
       destination: toAta,
       authority: signer,
       amount: 1_000_000n,
-      decimals: 6,
+      decimals: 10,
 
     })
 
@@ -93,7 +93,6 @@ const to = friend.address;
 
     await sendAndConfirm(signedTx, { commitment: "confirmed" });
     const signature = getSignatureFromTransaction(signedTx);
-
 
     console.log(`mint txid: ${signature}`);
   } catch (error) {
